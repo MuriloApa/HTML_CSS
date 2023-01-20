@@ -4,31 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outras formatações</title>
+    <title>Listas</title>
 </head>
 <body>
-    <h1>Outras formatações</h1>
-    <h2>Código-fonte</h2>
-    <p>O comando <code>document.getElementById('teste')</code> é escrito em linguagem JavaScript</p>
-    <pre>
-        <code>
-num = input('Digite um número')
-if num % 2 == 0:
-    print(f'O número {num} é PAR')
-else:
-    print(f'O número {num} é ÍMPAR')
-print('Fim do programa')
-        </code>
-    </pre>
-    <h2>Citações simples</h2>
-    <p>Como diria o pai de um amigo: <q>o computador e um burro muito rápido</q></p>
-    <h2>Citações completas</h2>
-    <p>Segundo Sócrates: 
-        <blockquote cite="https://www.pensador.com/frase/OTAyMjUz/">Nenhum cidadão tem o direito de ser um amador em matéria de treinamento físico. Que desgraça é para o homem envelhecer sem nunca ver a beleza e a força do que o seu corpo é capaz.</blockquote>
-    </p>
-    <h2>Abreviações</h2>
-    <p>No momento, estudo <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>, mas ainda pretendo ver JavaScript!</p>
-    <h2>Texto invertido</h2>
-    <p><bdo dir="rtl">Tenta ler na frente do espelho</bdo></p>
+    <h1>Trabalhando com Listas</h1>
+    <h2>Listas Ordenadas</h2>
+    <ol type="I"> <!--1 A a I i-->
+        <li>Acordar
+        <li>Ligar para o João
+        <li>Tomar chá
+        <li>Escovar os dentes
+        <li>Ir para a faculdade
+        <li>Almoçar
+        <li>Is para o trabalho
+        <li>Voltar para casa
+        <li>Jantar
+        <li>Dormir
+    </ol>
+    <h2>Listas não ordenadas</h2>
+    <ul type="square"> <!--disc (padrão), circlue, square-->
+        <li>Estudar HTML</li>
+        <li>Estudar CSS</li>
+        <li>Estudar JavaScript</li>
+        <li>Estudar python</li>
+    </ul>
+    <h2>Linguagens de programação que aprendi</h2>
+    <ol>
+        <li>Antigas</li>
+        <ol type="a">
+            <li>Pascalzim</li>
+        </ol>
+        <li>Novas</li>
+        <ol type="a" start="2">
+            <li>C</li>
+            <li>Java</li>
+            <li>Python</li>
+        </ol>
+    </ol>
+    <h2>Lista de definições</h2>
+    <dl> <!--dl → definition list-->
+        <dt>HTML</dt> <!--definition term-->
+        <dd>Linguagem de marcação para criação do conteúdo de um site.</dd> <!-- definition description-->
+
+        <dt>CSS</dt>
+        <dd>Linguagem de marcação para criação do design de um site.</dd>
+        
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para a criação de interatividade de um site.</dd>
+    </dl>
 </body>
 </html>
