@@ -7,7 +7,8 @@
     <title>Trabalhando com links</title>
 </head>
 <body>
-    <h1>Links externos</h1>
+    <h1>Links</h1>
+    <h2>Externos</h2>
     <!-- o parâmetro opcional "target" comanda como o link será aberto, por padrão, esse parâmetro é "_self" que abre o link na mesma janela
         Alguns valores possíveis: _blank: abre numa nova janela em branco
                                   _self:  abre na mesma janela/frame atual (padrão)
@@ -15,6 +16,9 @@
                                   _parent: 
     -->
     <!-- O parâmetro opcional "rel" indica a natureza do destino, se é parte do documento ou se não faz parte do site, por exemplo-->
-    <p>Acesse meu repositório <a href="https://github.com/MuriloApa" target="_top" rel="external">público no GitHub</a></p>
+    <p>Acesse meu repositório <a href="https://github.com/MuriloApa" target="_blank" rel="external">público no GitHub</a></p>
+    <h2>Internos</h2>
+    <p>Esta é a primeira página do site. Para acessar a segunda página, clique <a href="pag002.html" rel="next">aqui</a>.</p>
+    <p>A terceira página, de notícias, também pode ser acessada clicando <a href="noticias/pag003.html" rel="next">aqui</a></p>
 </body>
 </html>
