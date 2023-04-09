@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="aula, formulários">
+    <meta name="author" content="Murilo Aparecido Carvalho Nascimento">
+    <title>Aula sobre formulários</title>
+</head>
+<body>
+    <form action="http://cafe.intermidia.icmc.usp.br:22080/humberto/formulario.php" method="post" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Matricular aluno</legend>
+            <div>
+                <label for="txtNome">Nome:</label> <!--O atributo "for" recebe como valor o id do "input"-->
+                <input type="text" name="nNome" id="txtNome" size="20" maxlength="20" placeholder="Digite seu nome">
+            </div>
+            <div>
+                <label for="txtEmail">eMail:</label>
+                <input type="email" name="nEmail" id="txtEmail" size="20" placeholder="Digite seu email">
+            </div>
+            <div>
+                <label for="txtIdade">Idade:</label>
+                <input type="number" name="nIdade" id="txtIdade" min="18" max="110" value="30">
+            </div>
+            <div>
+                <label for="txtData">Data de nascimento:</label>
+                <input type="date" name="nData" id="txtData">
+            </div>
+            <div>
+                <label for="">Sexo:</label>
+                <input type="radio" checked name="nSexo" id="radioMasc" value="M">
+                <label for="radioMasc">Masculino</label>
+                <input type="radio" name="nSexo" id="radioFem" value="F">
+                <label for="radioFem">Feminino</label>
+            </div>
+            <div>
+                <label for="dropEstado">Estado:</label>
+                <select name="selEstado" id="dropEstado">
+                    <optgroup label="Região Sudeste">
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="SP">São Paulo</option>
+                    </optgroup>
+                    <optgroup label="Região Sul">
+                        <option value="RS">Rio Grande do Sul</option>
+                    </optgroup>
+                    <optgroup label="Região Centro-Oeste">
+                        <option value="MS" selected>Mato Grosso do Sul</option>
+                    </optgroup>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+            <div>
+                <label for="txtCidade">Cidade:</label>
+                <input type="text" id="txtCidade" list="listCidades">
+                <datalist id="listCidades">
+                    <option value="Rio de Janeiro"></option>
+                    <option value="São Paulo"></option>
+                    <option value="São Carlos"></option>
+                    <option value="Três Lagoas"></option>
+                    <option value="Campo Grande"></option>
+                </datalist>
+            </div>
+            <div>
+                <label for="txtFale">Fale sobre você:</label>
+                <textarea name="nFale" id="txtFale" cols="45" rows="2" placeholder="Fale mais sobre você"></textarea>
+            </div>
+            <div>
+                <label for="escolheCor">Cor da camiseta:</label>
+                <input type="color" name="nColor" id="escolheCor" value="#00DDDD">
+            </div>
+            <div>
+                <label for="selIngles">Nível de conhecimento de inglês:</label>
+                baixo <input type="range" name="nIngles" id="selIngles" min="0" max="10" step="1"> alto
+            </div>
+            <div>
+                <input type="checkbox" name="nNoticias" id="txtNoticias" checked>
+                <label for="txtNoticias">Quero receber emails com notícias:</label>
+            </div>
+            <div>
+                <label for="txtMatricula">Matrícula:</label>
+                <input type="text" name="nMatricula" id="txtMatricula" size="20" maxlength="40" placeholder="QRB-001"
+                title="A matrícula deve conter três letras maiúsculas, um traço e três números"
+                pattern="[A-Z]{3}-[0-9]{3}">
+            </div>
+            <div>
+                <label for="">Foto:</label>
+                <!--<input type="file" name="nFoto" id="foto"> para apenas uma imagem--> 
+                <input type="file" name="foto[]" id="foto" multiple>
+            </div>
+
+            <input type="reset" value="APAGAR">
+            <input type="submit" value="ENVIAR">
+            
+            <input type="hidden" name="fruta" value="abacaxi">
+        </fieldset>
+    </form>
+</body>
+</html>

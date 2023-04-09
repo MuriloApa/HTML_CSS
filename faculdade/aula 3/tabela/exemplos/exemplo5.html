@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="uso das tags 'thead', 'tbody' e 'tfoot' para atribuir valor semântico à tabela">
+    <title>Exemplo 5</title>
+</head>
+<body>
+    <table>
+        <caption>Vendas por mês</caption>
+        <thead>
+            <tr>
+                <th scope="col">Produto</th>
+                <th scope="col">JAN</th>
+                <th scope="col">FEV</th>
+                <th scope="col">MAR</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr><td>1</td> <td>20</td> <td>15</td> <td>25</td></tr>
+            <tr><td>2</td> <td>10</td> <td>10</td> <td>5</td></tr>
+            <tr><td>3</td> <td>5</td> <td>10</td> <td>15</td></tr>
+        </tbody>
+
+        <tfoot>
+            <tr><td>TOTAL</td> <td>35</td> <td>35</td> <td>45</td></tr>
+        </tfoot>
+    </table>
+</body>
+</html>
