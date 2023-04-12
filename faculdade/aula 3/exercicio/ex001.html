@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Murilo Aparecido Carvalho Nascimento">
-    <meta name="keywords" content="formulário, cadastro">
+    <meta name="keywords" content="formulário, cadastro, dados pessoais, dados de endereço, dados de login">
+    <meta name="description" content="Formulário para preenchimento de dados pessoas, de endereço e de login">
     <style>
         div{
             margin: 10px 0px;
@@ -19,7 +20,7 @@
 <body>
     <h1>Formulário de Cadastro</h1>
 
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="http://cafe.intermidia.icmc.usp.br:22080/humberto/formulario.php" method="post" enctype="multipart/form-data">
         <fieldset>
             <legend>Dados Pessoas</legend>
             <div>
@@ -57,13 +58,13 @@
             </div>
             <div>
                 <label for="">RG:</label>
-                <input type="text" name="nRg" id="rg" size="8" maxlength="13"
+                <input type="text" name="nRg" id="rg" size="8" maxlength="12"
                 title="O RG deve conter um par de números, seguido por ponto, um trio e um ponto, mais um trio e, por fim, traço seguido por dois números"
-                pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}">
+                pattern="[0-9]{2}\.[0-9]{3}\.[0-9]{3}-[0-9A-Z]">
             </div>
             <div>
                 <label for="">CPF:</label>
-                <input type="text">
+                <input type="text" maxlength="14">
             </div>
         </fieldset>
 
@@ -123,7 +124,7 @@
             </div>
             <div>
                 <label for="">CEP</label>
-                <input type="text" name="nCep" id="txtCep" size="10" maxlength="15" placeholder="00.000.000-000"
+                <input type="text" name="nCep" id="txtCep" size="10" maxlength="10" placeholder="00.000-000"
                 title="O CEP é composto por um par de números, um ponto, um trio de números, traço e um trio de números."
                 pattern="[0-9]{2}\.[0-9]{3}-[0-9]{3}">
             </div>
