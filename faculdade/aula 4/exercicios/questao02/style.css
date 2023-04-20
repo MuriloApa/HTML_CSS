@@ -1,0 +1,30 @@
+h1 {
+    margin: 0;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+li{
+    margin: .06rem;
+    background-color: #AAAAAA;
+    padding: .4rem;
+}
+
+li:hover {
+    background-color: #3299CC;
+}
+
+li a{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem;
+}
+
+li a:hover {
+    color: #AAAAAA;
+}

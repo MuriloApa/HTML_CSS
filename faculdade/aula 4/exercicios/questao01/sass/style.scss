@@ -1,0 +1,48 @@
+@use 'variables';
+
+body {
+
+    h1 {
+        padding: 0;
+        margin: 0;
+    }
+
+    nav {
+        ul {
+            position: fixed;
+            left: 0;
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding-left: 0;
+
+            li {
+                margin: 0rem;
+                padding: 0.5rem 0.5rem 0rem 0.5rem;
+                text-transform: uppercase;
+                border-style: solid;
+                border-color: variables.$init_border;
+                border-width: .15rem 0rem 0rem 0rem;
+
+                a {
+                    text-decoration: none;
+                    color: variables.$init_text_color;
+
+                    &:hover {
+                        color: variables.$interaction_text_color;
+                        
+                    }
+                }
+
+                &:hover {
+
+                    border-top-color: variables.$interaction_border;
+                    border-left-color: variables.$init_border;
+                    border-right-color: variables.$init_border;
+                    border-width: 0.15rem 0.1rem 0rem 0.1rem;
+                }
+            }
+        }
+    }
+}
