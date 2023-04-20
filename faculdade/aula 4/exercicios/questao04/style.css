@@ -1,10 +1,13 @@
 :root {
     --init-border: #CDCDCD;
     --inte-border :#B40404;
-    --inte-border-submenu: #B40404;
+    --inte-border-submenu: #088A08;
     --back-color: #FFFFFF;
-    --back-color-inte: 
-    
+    --back-color-inte: #B40404;
+    --back-color-submenu: #088A08;
+    --color-text: #000000;
+    --color-text-inte: #FFFFFF;
+
 }
 
 * {
@@ -15,39 +18,63 @@ h1 {
     margin: 0;
 }
 
-nav#menu>ul {
+#menu>ul {
     padding-left: 0;
     list-style: none;
     display: inline-flex;
     border-style: solid;
     border-width: 1px 0 0 0;
     border-color: var(--init-border);
+    
 }
 
+#menu>ul li{
+    padding: 5px;
+}
 
-nav#menu>ul li{
-    margin: 5px;
+#menu>ul>li:hover:not(.green){
+    background-color: var(--inte-border);
+    border-color: var(--inte-border);
+}
+
+#menu>ul>li:hover>a{
+    color: var(--color-text-inte);
+}
+
+#menu>ul>li>a{
+    text-transform: uppercase;
+    text-decoration: none;
 }
 
 .green {
-    display: inline-flex;
+    display: inline;
     position: relative;
+}
+
+.green:hover {
+    background-color: var(--back-color-submenu);
+    border-color: var(--inte-border-submenu);
+}
+
+.green:hover .submenu{
+    left: 0;
+    margin-top: 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--init-border);
+    display: block;
+    position: absolute; 
+    text-align: left;
+    width: 9.5rem;
+    padding: .5rem 2rem .5rem .5rem;
 }
 
 .submenu {
     display: none;
-    /* visibility: hidden; */
-    position: absolute;
     list-style: none;
 }
 
-
-.green:hover .submenu{
-    display: block;
-    /* visibility: visible; */
-}
-
-a {
-    text-transform: uppercase;
+.submenu li a{
+    text-transform: capitalize;
     text-decoration: none;
 }
