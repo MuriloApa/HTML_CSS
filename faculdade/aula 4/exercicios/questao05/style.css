@@ -1,0 +1,21 @@
+.maior {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.center {
+    border-width: 2px;
+    border-color: black;
+    border-style: solid;   
+    margin-left: 7.5rem;
+    width: 425px;
+    height: 115px;
+}
+
+.center p {
+    margin: 1rem;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+}
