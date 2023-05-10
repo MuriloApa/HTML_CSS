@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+}
+
+/* .turtle {
+    display: flex;
+    flex-direction: column;
+}
+ */
+.name{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.leonardo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.leonardo .name{
+    font-weight: bold;
+    flex-basis: 100%;
+    order: -1;
+    color: #64b4e4;
+}
+
+.leonardo .mask {
+    background-color: #64b4e4;
+    flex-basis: 50%;
+    order: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+}
+
+.leonardo .description {
+    background-color: #84b444;
+    flex-basis: 50%;
+    order: 1;
+    height: 130px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.raphael {
+    display: flex;
+    flex-direction: column;
+}
+
+.raphael .nome {
+    order: -1;
+}
+
+.raphael .mask {
+    background-color:#ec3444;
+    order: 0;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.raphael .description {
+    order: 1;
+    background-color: #84b444;
+    height: 90px;
+}
+
+.raphael .description ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15px;
+}
