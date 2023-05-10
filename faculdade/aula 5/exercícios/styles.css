@@ -1,80 +1,248 @@
+:root{
+    --color_leonardo: #64b4e4;
+    --color_raphael: #ec3444;
+    --color_michelangelo: #fcc45c;
+    --color_donatello: #bc64ac;
+    --color_background: #84b444;
+}
+
 body {
     margin: 0;
 }
 
-/* .turtle {
-    display: flex;
-    flex-direction: column;
-}
- */
-.name{
-    background-color: black;
-    color: white;
-    padding: 15px;
-    text-transform: uppercase;
-    text-align: center;
+@media (max-width: 750px) {
+
+    .description {
+        background-color: var(--color_background);
+    }
+
+    .name {
+        background-color: black;
+        height: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mask {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+    .leonardo .mask{
+        background-color: var(--color_leonardo);
+        order: 1;
+    }
+
+    .leonardo .description{
+        order: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .leonardo .name{
+        color: var(--color_leonardo);
+        order: -1;
+    }
+
+    .raphael .mask{
+        background-color: var(--color_raphael);
+    }    
+
+    .raphael .description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .raphael .name{
+        color: var(--color_raphael);
+    }
+
+    .michelangelo .mask{
+        background-color: var(--color_michelangelo);
+    }
+
+    .michelangelo .name{
+        color: var(--color_michelangelo);
+    }
+
+    .michelangelo .description{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donatello{
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    .donatello .name{
+        order: -1;
+        color: var(--color_donatello);
+    }
+
+    .donatello .mask{
+        background-color: var(--color_donatello);
+        order: 1;
+        
+    }
+
+    .donatello .description{
+        order: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
 }
 
-.leonardo {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
+@media (min-width: 750px) {
 
-.leonardo .name{
-    font-weight: bold;
-    flex-basis: 100%;
-    order: -1;
-    color: #64b4e4;
-}
+    .description {
+        background-color:var(--color_background);
+        height: 130px;
+    }
 
-.leonardo .mask {
-    background-color: #64b4e4;
-    flex-basis: 50%;
-    order: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 130px;
-}
+    .name {
+        background-color: black;
+        padding: 15px;
+        text-transform: uppercase;
+        text-align: center;
+    }
 
-.leonardo .description {
-    background-color: #84b444;
-    flex-basis: 50%;
-    order: 1;
-    height: 130px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
+    .leonardo {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-.raphael {
-    display: flex;
-    flex-direction: column;
-}
+    .leonardo .name {
+        flex-basis: 100%;
+        order: -1;
+        color: var(--color_leonardo);
+    }
 
-.raphael .nome {
-    order: -1;
-}
+    .leonardo .mask {
+        background-color: var(--color_leonardo);
+        flex-basis: 50%;
+        order: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 130px;
+    }
 
-.raphael .mask {
-    background-color:#ec3444;
-    order: 0;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .leonardo .description {
+        flex-basis: 50%;
+        order: 1;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 
-.raphael .description {
-    order: 1;
-    background-color: #84b444;
-    height: 90px;
-}
+    .raphael {
+        display: flex;
+        flex-direction: column;
+    }
 
-.raphael .description ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 15px;
+    .raphael .name {
+        order: -1;
+        color: var(--color_raphael);
+
+    }
+
+    .raphael .mask {
+        background-color: var(--color_raphael);
+        order: 0;
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .raphael .description {
+        order: 1;
+        height: 95px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .raphael .description ul {
+        display: inline-flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        margin-right: 15px;
+    }
+
+    .michelangelo {
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    .michelangelo .name {
+        order: -1;
+        flex-basis: 100%;
+        color: var(--color_michelangelo);
+    }
+
+    .michelangelo .description {
+        order: 0;
+        flex-basis: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .michelangelo .description ul {
+        margin-right: 2em;
+    }
+
+    .michelangelo .mask {
+        background-color: var(--color_michelangelo);
+        order: 1;
+        flex-basis: 50%;
+        height: 130px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donatello {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .donatello .name {
+        color: var(--color_donatello);
+    }
+
+    .donatello .mask {
+        background-color: var(--color_donatello);
+        height: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .donatello .description {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 95px;
+    }
+
+    .donatello .description ul {
+        display: inline-flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-basis: 100%;
+
+    }
 }
